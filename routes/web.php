@@ -33,5 +33,12 @@ $router->group(['prefix' => 'api'], function () use ($router) {
         $router->put('/authors/{id}', ['uses' => 'AuthorController@put']);
         $router->patch('/authors/{id}', ['uses' => 'AuthorController@patch']);
         $router->delete('/authors/{id}', ['uses' => 'AuthorController@delete']);
+
+        $router->get('/books', ['uses' => 'AuthorController@index']);
+        $router->get('/books/{id}', ['uses' => 'AuthorController@get']);
+        $router->post('/books', ['uses' => 'AuthorController@post']);
+        $router->put('/books/{id}', ['uses' => 'AuthorController@put']);
+        $router->patch('/books/{id}', ['uses' => 'AuthorController@patch']);
+        $router->delete('/books/{id}', ['uses' => 'AuthorController@delete']);
     });
 });
