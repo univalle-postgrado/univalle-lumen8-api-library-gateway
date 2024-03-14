@@ -34,11 +34,11 @@ $router->group(['prefix' => 'api'], function () use ($router) {
         $router->patch('/authors/{id}', ['uses' => 'AuthorController@patch']);
         $router->delete('/authors/{id}', ['uses' => 'AuthorController@delete']);
 
-        $router->get('/books', ['uses' => 'AuthorController@index']);
-        $router->get('/books/{id}', ['uses' => 'AuthorController@get']);
-        $router->post('/books', ['uses' => 'AuthorController@post']);
-        $router->put('/books/{id}', ['uses' => 'AuthorController@put']);
-        $router->patch('/books/{id}', ['uses' => 'AuthorController@patch']);
-        $router->delete('/books/{id}', ['uses' => 'AuthorController@delete']);
+        $router->get('/books', ['uses' => 'BookController@index']);
+        $router->get('/books/{id}', ['uses' => 'BookController@get']);
+        $router->post('/books', ['uses' => 'BookController@post']);
+        $router->put('/books/{id}', ['uses' => 'BookController@put']);
+        $router->patch('/books/{id}', ['uses' => 'BookController@patch']);
+        $router->delete('/books/{id}', ['uses' => 'BookController@delete']);
     });
 });
