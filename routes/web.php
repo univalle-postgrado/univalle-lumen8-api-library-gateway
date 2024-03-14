@@ -28,5 +28,10 @@ $router->group(['prefix' => 'api'], function () use ($router) {
 
     $router->group(['middleware' => 'auth', 'prefix' => 'v1'], function () use ($router) {
         $router->get('/authors', ['uses' => 'AuthorController@index']);
+        $router->get('/authors/{id}', ['uses' => 'AuthorController@get']);
+        $router->post('/authors', ['uses' => 'AuthorController@post']);
+        $router->put('/authors/{id}', ['uses' => 'AuthorController@put']);
+        $router->patch('/authors/{id}', ['uses' => 'AuthorController@patch']);
+        $router->delete('/authors/{id}', ['uses' => 'AuthorController@delete']);
     });
 });
